@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro del estudiante</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="container" back>
+        <header class="superior">
+            <div class="logo">
+                <img src="img/LOGO CEIIS.png" alt="" width="75px" aling="center">
+            </div>
+            <nav class="menu">
+                <ul class="opciones">
+                    <li><a href="">Iniciar sesion</a></li>
+                    <li><a href="">Crear una cuenta</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="slider">
+            <img src="img/alameda.jpg" alt="" width="100%">
+        </section>
+
+        <section class="cuerpo">
+            <h1 class="titulo">
+                SISTEMA DE PRESTAMO CEIIS
+            </h1>
+            <div class="container2">
+                <div class="form__top">
+                    <h2>Formulario <span>Registro Administrador</span></h2>
+                </div>
+                <form class="form__reg" action="">
+                    <input class="input" type="text" placeholder="Nombres" required>
+                    <input class="input" type="text" placeholder="Apellidos" required>
+
+                    <input class="input" type="text" placeholder="Celular" required>
+
+                    <h4 margin="0px">Tipo de Usuario</h4>
+                    <label class="container3">Secretaria
+                        <input type="radio" checked="checked" name="radio" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container3">Miembro del CEIIS
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <input class="input" type="text" placeholder="Código UNI (Si es estudiante)">
+                    <div class="btn__form">
+                        <input class="btn__submit" type="submit" value="REGISTRAR" onclick="openForm()">
+                        <input class="btn__reset" type="reset" value="LIMPIAR">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <div class="form__top">
+                    <h2><span>¡Gracias por registrarte!</span></h2>
+                    <h4>Recibirás un email para confirmar tu registro.</h4>
+
+                    <h4>Si no lo has recibido en los próximos diez minutos, haz click aquí para que te lo enviemos de
+                        nuevo.</h4>
+                </div>
+                <button type="button" class="btn reenviar">Reenviar</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
+            </form>
+        </div>
+       
+    </div>
+
+</body>
+
+</html>
